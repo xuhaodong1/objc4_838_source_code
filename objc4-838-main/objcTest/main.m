@@ -1,20 +1,20 @@
 //
 //  main.m
-//  WSBuild
+//  objcTest
 //
-//  Created by 无双 on 2022/2/25.
+//  Created by haodong xu on 2022/3/31.
 //
 
 #import <Foundation/Foundation.h>
-#import "WSPerson.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        
-        WSPerson *person = [WSPerson alloc];
-        
         NSLog(@"Hello, World!");
+        NSObject *obj = [NSObject alloc];
+        @synchronized (obj) {
+            NSLog(@"person");
+        }
     }
     return 0;
 }
